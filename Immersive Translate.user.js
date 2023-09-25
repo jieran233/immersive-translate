@@ -3602,11 +3602,13 @@ body {
   height: 100%;
   width: 100%;
   touch-action: none;
+  display: none;
 }
 .immersive-translate-popup-wrapper {
   background: var(--background-color);
   border-radius: 10px;
   border: 1px solid var(--muted-border-color);
+  display: none;
 }
 
 #mount#mount {
@@ -3828,6 +3830,7 @@ body {
   right: 0;
   top: 335px;
   width: 36px;
+  display: none;
 }
 .immersive-translate-popup-btn {
   display: inline-block;
@@ -3845,8 +3848,10 @@ body {
   transition: transform ease-out 250ms, -webkit-transform ease-out 250ms;
   border: none;
   padding: 0;
+  display: none;
 }
 .immersive-translate-popup-btn > svg {
+  display: none;
 }
 #mount#mount {
   position: absolute;
