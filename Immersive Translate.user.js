@@ -54,7 +54,7 @@
 // @connect    api.immersivetranslate.com
 // @connect    immersive-translate.deno.dev
 // @connect    www.googleapis.com
-// @connect    www.google-analytics.com
+// @connect    www.google-analytics.com.fuck
 // @connect    api.papago-chrome.com
 // @connect    api.openai.com
 // @connect    api.interpreter.caiyunai.com
@@ -17389,8 +17389,8 @@ ${injectedCss}}
         ""
       );
       userId ? installedAt || (installedAt = (/* @__PURE__ */ new Date(0)).toISOString(), await set("installedAt", installedAt)) : (userId = makeid3(32), await set("fakeUserId", userId)), installedAt || (installedAt = nowDate.toISOString(), await set("installedAt", installedAt));
-      let installAtDate = new Date(installedAt), installDay = getBeijingDay(installAtDate), nowDay = getBeijingDay(nowDate), isNewUser = installDay === nowDay, isNewUserThisWeek = nowDate.getTime() - installAtDate.getTime() < 7 * 24 * 60 * 60 * 1e3, url = `https://www.google-analytics.com/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}`;
-      isProd3 || (url = `https://www.google-analytics.com/debug/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}`);
+      let installAtDate = new Date(installedAt), installDay = getBeijingDay(installAtDate), nowDay = getBeijingDay(nowDate), isNewUser = installDay === nowDay, isNewUserThisWeek = nowDate.getTime() - installAtDate.getTime() < 7 * 24 * 60 * 60 * 1e3, url = `https://www.google-analytics.com.fuck/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}`;
+      isProd3 || (url = `https://www.google-analytics.com.fuck/debug/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}`);
       let theBrowserInfo = U4.parse(window.navigator.userAgent), formatedEvents = events.map((event) => {
         let currentParam = event.params || {};
         theBrowserInfo.os && (currentParam.os_name = theBrowserInfo.os.name || "unknown", currentParam.os_version = theBrowserInfo.os.version || "unknown", currentParam.os_version_name = theBrowserInfo.os.versionName || "unknown"), theBrowserInfo.browser && (currentParam.browser_name = theBrowserInfo.browser.name || "unknown", currentParam.browser_version = theBrowserInfo.browser.version || "unknown"), theBrowserInfo.platform && (currentParam.platform_type = theBrowserInfo.platform.type || "unknown"), theBrowserInfo.engine && (currentParam.engine_name = theBrowserInfo.engine.name || "unknown", currentParam.engine_version = theBrowserInfo.engine.version || "unknown"), ctx.translationService && (currentParam.translation_service = ctx.translationService), ctx.targetLanguage && (currentParam.target_language = ctx.targetLanguage), ctx.config.interfaceLanguage && (currentParam.interface_language = ctx.config.interfaceLanguage), version && (currentParam.version = version), ctx.config.translationTheme && (currentParam.translation_theme = ctx.config.translationTheme), ctx.config.alpha && (currentParam.alpha = ctx.config.alpha.toString()), ctx.config.translationArea && (currentParam.translation_area = ctx.config.translationArea), currentParam.userscript = isUserscript.toString(), isNewUser ? currentParam.is_new_user_today = "1" : currentParam.is_new_user_today = "0", isNewUserThisWeek ? currentParam.is_new_user_this_week = "1" : currentParam.is_new_user_this_week = "0";
